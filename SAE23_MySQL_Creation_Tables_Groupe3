@@ -1,0 +1,18 @@
+CREATE DATABASE Ludotheque;
+USE Ludotheque;
+
+CREATE TABLE joueurs(id_joueur INTEGER UNSIGNED AUTO_INCREMENT NOT NULL, PRIMARY KEY(id_joueur), nom_joueur VARCHAR(40) NOT NULL, prenom_joueur VARCHAR(40) NOT NULL, mail_joueur VARCHAR(60), mdp_joueur VARCHAR(40) NOT NULL, type_joueur ENUM('particulier','professionnel') NOT NULL);
+
+CREATE TABLE jeux(id_jeu INTEGER UNSIGNED AUTO_INCREMENT NOT NULL, PRIMARY KEY(id_jeu), titre_jeu VARCHAR(40), annee_sortie DATE NOT NULL, photo_boite LONGBLOB NOT NULL, editeur_jeu TEXT, id_categorie INTEGER UNSIGNED NOT NULL, FOREIGN KEY(id_categorie) REFERENCES categorie(id_categorie));
+
+CREATE TABLE categorie(id_categorie INTEGER UNSIGNED AUTO_INCREMENT NOT NULL, PRIMARY KEY(id_catégorie), nom_categorie VARCHAR(40) NOT NULL, descriptif TEXT NOT NULL);
+
+CREATE TABLE jouent(id_joueur INTEGER UNSIGNED NOT NULL, FOREIGN KEY(id_joueur) REFERENCES joueurs(id_joueur), id_jeu INTEGER UNSIGNED NOT NULL, FOREIGN KEY(id_jeu) REFERENCES jeux(id_jeu));
+
+CREATE TABLE auteurs(id_auteur INTEGER UNSIGNED AUTO_INCREMENT NOT NULL, PRIMARY KEY(id_auteur), nom_auteur VARCHAR(40), prenom_auteur VARCHAR(40), age_auteur TINYINT, photo_auteur LONGBLOB);
+
+CREATE TABLE cree_par(id_jeu INTEGER UNSIGNED NOT NULL, FOREIGN KEY(id_jeu) REFERENCES jeux(id_jeu), id_auteur INTEGER UNSIGNED NOT NULL, FOREIGN KEY(id_auteur) REFERENCES auteurs(id_auteur));
+
+CREATE TABLE commentaire(id_commentaire INTEGER UNSIGNED AUTO_INCREMENT NOT NULL, PRIMARY KEY(id_commentaire), note TINYINT(20) NOT NULL, descriptif_commentaire TEXT NOT NULL, date_commentaire DATE NOT NULL, id_joueur INTEGER UNSIGNED NOT NULL, FOREIGN KEY(id_joueur) REFERENCES joueurs(id_joueur), id_jeu INTEGER UNSIGNED NOT NULL, FOREIGN KEY(id_jeu) REFERENCES jeux(id_jeu));
+
+

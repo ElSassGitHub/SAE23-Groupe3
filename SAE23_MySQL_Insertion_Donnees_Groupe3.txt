@@ -1,0 +1,100 @@
+-> joueurs
+
+INSERT INTO joueurs VALUES
+(1,'weissreiner','joshua','joshua.weissreiner@uha.fr','mdpjoshua','particulier'), 
+(2,'maradan','ayrton','ayrton.maradan@uha.fr','mdpayrton','particulier'), 
+(3,'guittet','olivier','olivier.guittet@uha.fr','mdpolivier','particulier'), 
+(4,'blanc-carrier','baptiste','baptiste.blanc-carrier@uha.fr','mdpbaptiste','particulier'), 
+(5,'albert','arnaud','arnaud.albert@uha.fr','mdparnaud','professionnel'), 
+(6,'mura','laurent','laurent.mura@uha.fr','mdpmura','professionnel'), 
+(7,'le-thiec','basile','basile.le-thiec@uha.fr','mdpbasile','particulier'), 
+(8,'hensel','philippe','philippe.hensel@uha.fr','mdpphilippe','professionnel'), 
+(9,'poellen','dorian','dorian.poellen@uha.fr','mdpdorian','particulier'), 
+(10,'bennis','ismail','ismail.bennis@uha.fr','mdpismail','professionnel'), 
+(11,'brodin','maxime','maxime.brodin@uha.fr','mdpmaxime','particulier'), 
+(12,'wojdyla','stephane','stephane.wojdyla@uha.fr','mdpstephane','professionnel'), 
+(13,'clauss','julien','julien.clauss@uha.fr','mdpjulien','particulier'), 
+(14,'drouhin','frederic','frederic.drouhin@uha.fr','mdpfrederic','professionnel'), 
+(15,'hemmi','anass','anass.hemmi@uha.fr','mdpanass','particulier');
+
+
+
+-> jeux
+
+INSERT INTO jeux VALUES
+(1,'Pandemic','2008-01-01','/home/toto/MySQL/Jeux/pandemic.jpg','Z-Man Games',3), 
+(2,'Azul','2017-01-01','/home/toto/MySQL/Jeux/azul.jpg','Next Move',3), 
+(3,'Clank','2018-01-01','/home/toto/MySQL/Jeux/clank.jpg','Renegade Game Studio',1), 
+(4,'Obscurio','2019-01-01,'/home/toto/MySQL/Jeux/obscurio.jpg','Libellud',2);
+
+
+
+-> catégories
+
+INSERT INTO categorie VALUES
+(1,'compétitif','jeux basés sur la compétition entre joueurs, notamment au travers d'un système de points'), 
+(2,'déduction', 'jeux où un ou plusieurs joueurs possèdent un rôle qu'ils doivent cacher aux autres participants afin de gagner'), 
+(3,'party games','jeux non-compétitifs pour passer un moment amusant');
+
+
+
+-> auteurs
+
+INSERT INTO auteurs VALUES
+(1,'marionnet','florian',34,'/home/toto/MySQL/Auteurs/f_marionnet.png'), 
+(2,'mauro','axel',28,'/home/toto/MySQL/Auteurs/a_mauro.png'), 
+(3,'leacock','matt',47,'/home/toto/MySQL/Auteurs/m_leacock.jpeg'), 
+(4,'dennen','paul',30,'/home/toto/MySQL/Auteurs/p.dennen.jpg'), 
+(5,'kiesling','michael',52,'/home/toto/MySQL/Auteurs/m_kiesling.jpg');
+
+
+
+-> commentaires
+
+INSERT INTO commentaire VALUES
+(1,15,'Très bonne soirée entre amis.','2023-01-13',1,3), 
+(2,13,'Expèrience plutôt agréable.','2023-01-13',2,4), 
+(3,17,'Absolument aucun regrets. Je reviendrai.','2023-01-13',3,2), 
+(4,8,'Le jeu à des bonnes qualités, mais ses défauts sont trop importants.','2023-01-13',4,1), 
+(5,4,'Expèrience absolument déplorable. Ce jeu n'a fait que nous énerver.','2023-01-13',5,1), 
+(6,11,'Ce n'est pas le pire jeu auquel nous avons joué.','2023-01-13',6,4), 
+(7,19,'Nous ne pouvons que recommander ce jeu. Il a transformé une soirée médiocre en très bon moment.','2023-01-13',7,4), 
+(8,2,'Ce jeu est tellement mauvais que nous en rions encore.','2023-01-13',8,4), 
+(9,9,'Ce jeu est si proche d'être bon que cela en devient énervant.','2023-01-13',9,1), 
+(10,16,'Jeu excellent.','2023-01-13',10,2), 
+(11,14,'Jeu sympathique, bien que l'on ai l'impression que tout les rôles ne sont pas si bien équilibrés.','2023-01-13',11,2), 
+(12,7,'Je n'aime pas perdre.','2023-01-13',12,3), 
+(13,15,'Bonne expèrience. A refaire.','2023-01-13',13,2), 
+(14,6,'Je n'ai pas les mots pour décrire à quel point ce jeu ne mérite pas d'exister.','2023-01-13',14,4), 
+(15,13,'Plutôt bonne expèrience.','2023-01-13',15,1);
+
+
+
+-> jouent
+
+INSERT INTO jouent VALUES
+(1,3), 
+(2,4), 
+(3,2), 
+(4,1), 
+(5,1), 
+(6,4), 
+(7,4), 
+(8,4), 
+(9,1), 
+(10,2), 
+(11,2), 
+(12,3), 
+(13,2), 
+(14,4), 
+(15,1);
+
+
+
+-> créé_par
+
+INSERT INTO cree_par VALUES
+(1,3), 
+(2,4), 
+(3,1), 
+(4,2);
