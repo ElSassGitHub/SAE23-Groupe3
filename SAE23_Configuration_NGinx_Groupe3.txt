@@ -1,0 +1,18 @@
+-> Fichier "mesprojets/mesprojets/settings.py"
+
+STATIC_URL = '/home/totosae/static/' # chemins vers les fichiers statiques (css) #
+
+
+
+-> Fichier "/etc/nginx/sites-available/mesprojets"
+
+server {
+   listen 80;
+   server_name 192.168.197.125; # machine où se trouve NGinx #
+location /static/ {
+   alias /home/totosae/static/;
+}
+location / {
+   proxy_pass http://192.168.197.125:8000; # @IP et port d'écoute de gunicorn #
+   }
+}
