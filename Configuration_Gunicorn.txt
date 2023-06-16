@@ -1,6 +1,0 @@
--> Fichier "conf/gunicorn_config.py"
-
-command = '/home/ubuntu/django_env/bin/gunicorn'
-pythonpath = '/home/totosae/mesprojets'
-bind = '192.168.197.125:8000' # @IP et port où écoute gunicorn #
-workers = 3
